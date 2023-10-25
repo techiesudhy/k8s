@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: mywebsitefrnd
-        image: ksudhy/website:9
+        image: ksudhy/website:v1
         ports:
         - containerPort: 80

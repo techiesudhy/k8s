@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mywebsitefrnd
+  labels:
+    app: mywebsite_1_frnt
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mywebsite_1_frnt
+  template:
+    metadata:
+      labels:
+        app: mywebsite_1_frnt
+    spec:
+      containers:
+      - name: mywebsitefrnd
+        image: ksudhy/website:9
+        ports:
+        - containerPort: 80
